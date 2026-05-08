@@ -13,17 +13,17 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
         
-        // Paso 1: Crear un arreglo de tamaño 'length'
+        // Step 1: Create an array of size 'length'
         double[] multiples = new double[length];
 
-        // Paso 2: Usar un bucle for desde 0 hasta length-1
+        // Step 2: Use a for loop from 0 to length-1
         for (int i = 0; i < length; i++)
         {
-            // Paso 3: Guardar en cada posición el múltiplo correspondiente
+            // Step 3: Store in each position the corresponding multiple
             multiples[i] = number * (i + 1);
         }
 
-        // Paso 4: Devolver el arreglo
+        // Step 4: Return the array
         return multiples;
     }
         
@@ -41,19 +41,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        // Paso 1: Normalizar la cantidad de rotaciones
+        // Step 1: Normalize the rotation amount (in case amount > data.Count)
         amount = amount % data.Count;
 
-        // Paso 2: Tomar los últimos 'amount' elementos
+        // Step 2: Take the last 'amount' elements
         var tail = data.GetRange(data.Count - amount, amount);
 
-        // Paso 3: Tomar los primeros elementos restantes
+        // Step 3: Take the remaining first elements
         var head = data.GetRange(0, data.Count - amount);
 
-        // Paso 4: Limpiar la lista original
+        // Step 4: Clear the original list
         data.Clear();
 
-        // Paso 5: Agregar primero los últimos y luego los primeros
+        // Step 5: Add the last elements first, then the first elements
         data.AddRange(tail);
         data.AddRange(head);
     }
